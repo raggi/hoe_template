@@ -8,3 +8,26 @@ going.
   rake copy  # Copy in files, overwriting if newer
   rake diff  # Diff directories
   rake link  # Link user template to repo (good for forks)
+
+This is for use with hoe's project generator:
+
+  sow project_name
+
+It's currently setup for github hosted projects, and a lib[username] project
+on rubyforge mirroring the project gems, and hosting rdocs.
+
+To setup on rubyforge, I use the rubyforge gem, so for libraggi, this works
+like:
+
+  rubyforge create_package libraggi project_name
+
+A quick summary of a workflow:
+
+  sow project_name
+  cd project_name
+  $EDITOR .
+  git add .
+  git commit -a -v
+  github create-from-local .
+  rubyforge create_package libraggi project_name
+  rake release
