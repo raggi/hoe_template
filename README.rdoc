@@ -1,0 +1,10 @@
+= raggi's hoe_template
+
+This is just my hoe template, feel free to fork. The rake tasks should get you
+going.
+
+  rake -T
+
+  rake copy  # Copy in files, overwriting if newer
+  rake diff  # Diff directories
+  rake link  # Link user template to repo (good for forks)
