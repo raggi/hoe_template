@@ -31,3 +31,4 @@ A quick summary of a workflow:
   github create-from-local .
   rubyforge create_package libraggi project_name
   rake release
+  rake publish
