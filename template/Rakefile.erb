@@ -4,13 +4,13 @@ require 'hoe'
 Hoe.plugin :doofus, :git, :minitest
 
 Hoe.spec '<%= project %>' do
-  developer('<%= ENV['USER'] %>', '<%= ENV['USER'] || XIF %>@rubyforge.org')
+  developer '<%= ENV['USER'] %>', '<%= ENV['USER'] || XIF %>@rubyforge.org'
   extra_dev_deps << %w(hoe-doofus >=1.0.0)
   extra_dev_deps << %w(hoe-seattlerb >=1.2)
   extra_dev_deps << %w(hoe-git >=1.3.0)
+
   self.extra_rdoc_files = FileList["**/*.rdoc"]
   self.history_file     = "CHANGELOG.rdoc"
   self.readme_file      = "README.rdoc"
   self.rubyforge_name   = 'lib<%= ENV['USER'] || XIF %>'
-  self.testlib          = :minitest
 end
